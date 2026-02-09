@@ -29,6 +29,9 @@ class Player:
         self.radius = 20
         self.color = BLUE
 
+        # Direction the player is facing
+        self.angle = 0  
+
     def handle_input(self):
         keys = pygame.key.get_pressed()
         self.vel.update(0, 0)
@@ -42,19 +45,28 @@ class Player:
         if keys[pygame.K_s]:
             self.vel.y = 1
 
-        # Normalize diagonal movement
         if self.vel.length() > 0:
             self.vel = self.vel.normalize() * self.speed
+
+            # Update facing angle based on movement direction
+            self.angle = self.vel.angle_to(Vector2(1, 0))
 
     def update(self):
         self.pos += self.vel
 
-        # Keep player on screen
         self.pos.x = max(self.radius, min(WIDTH - self.radius, self.pos.x))
         self.pos.y = max(self.radius, min(HEIGHT - self.radius, self.pos.y))
 
     def draw(self, surface):
+        # Draw player body
         pygame.draw.circle(surface, self.color, self.pos, self.radius)
+
+        # Draw direction line (shows rotation)
+        direction = Vector2(1, 0).rotate(-self.angle)
+        end_pos = self.pos + direction * self.radius
+
+        pygame.draw.line(surface, (0, 0, 0), self.pos, end_pos, 3)
+
 
 # -----------------------------
 # Create Player
