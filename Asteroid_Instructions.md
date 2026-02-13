@@ -10,11 +10,7 @@ You will program:
 * Bullets that destroy asteroids
 * Screen wrap mechanics
 * Collision detection
-
-
 ---
-
-
 # Project Requirements
 ## Classes
 
@@ -44,41 +40,6 @@ You will program:
 
 * Bullet ↔ asteroid
 * Ship ↔ asteroid (lose a life)
----
-
-
----
-
-## 🔹 Milestone 2 – Shooting System
-
-* Add Bullet class
-* Fire bullet in facing direction
-* Limit fire rate (no bullet spam)
-
-Deliverable: Ship can shoot bullets that disappear after time.
-
----
-
-## 🔹 Milestone 3 – Asteroids
-
-* Spawn 5 large asteroids
-* Random velocity and direction
-* Screen wrapping
-
-Deliverable: Asteroids float around screen.
-
----
-
-## 🔹 Milestone 4 – Collisions & Splitting
-
-* Bullet destroys asteroid
-* Large → 2 medium
-* Medium → 2 small
-* Small → removed
-
-Deliverable: Asteroids split correctly.
-
----
 
 
 
