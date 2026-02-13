@@ -1,51 +1,48 @@
 import pygame
-from pygame.math import Vector2
+import random
 
-# -----------------------------
-# Initialization
-# -----------------------------
+# Initialize engine and setup display constants
 pygame.init()
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption("Vector2 Player Class Template")
+clock = pygame.time.Clock()  # Controls frame rate
+font = pygame.font.SysFont("Arial", 48)
 
-clock = pygame.time.Clock()
-FPS = 60
+class Spaceship:
+    def __init__(self):
+        pass
 
-# -----------------------------
-# Colors
-# -----------------------------
-WHITE = (255, 255, 255)
-BLUE = (50, 100, 255)
+    def rotate(self, dir):
+        pass
+
+    def accelerate(self):
+        pass
+
+    def update(self):
+        pass
+
+    def draw(self, surface):
+        pass
+
+def main():
+    # Game State Objects
+    running = True
+    game_over = False
+
+    while running:
+        screen.fill((0, 0, 0)) # Clear frame
+
+        # Event Handling
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                running = False
 
 
 
+        pygame.display.flip() # Update the full display
+        clock.tick(60)        # Maintain 60 FPS
 
+    pygame.quit()
 
-# -----------------------------
-# Main Game Loop
-# -----------------------------
-running = True
-while running:
-    clock.tick(FPS)
-
-    # -------------------------
-    # Events
-    # -------------------------
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
-
-
-
-    # -------------------------
-    # Draw
-    # -------------------------
-    screen.fill(WHITE)
-    
-    pygame.display.flip()
-
-# -----------------------------
-# Cleanup
-# -----------------------------
-pygame.quit()
+if __name__ == "__main__":
+    main()
