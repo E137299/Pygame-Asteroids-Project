@@ -11,6 +11,7 @@ In games, we constantly work with:
 * Angles and rotation
 
 Instead of manually managing x and y separately, `Vector2` lets us treat them as a **single mathematical object**.
+
 Without Vector2:
 
 * Movement is messy
