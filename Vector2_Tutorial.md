@@ -11,7 +11,17 @@ In games, we constantly work with:
 * Angles and rotation
 
 Instead of manually managing x and y separately, `Vector2` lets us treat them as a **single mathematical object**.
+Without Vector2:
 
+* Movement is messy
+* Diagonal speed is wrong
+* Rotation is painful
+
+With Vector2:
+
+* Math becomes clean
+* Code becomes readable
+* Physics becomes manageable
 ---
 
 # Importing and Creating a Vector
@@ -312,18 +322,4 @@ while running:
 pygame.quit()
 ```
 
----
 
-# Why Vector2 Is So Important
-
-Without Vector2:
-
-* Movement is messy
-* Diagonal speed is wrong
-* Rotation is painful
-
-With Vector2:
-
-* Math becomes clean
-* Code becomes readable
-* Physics becomes manageable
